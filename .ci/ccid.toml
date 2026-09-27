@@ -13,4 +13,4 @@ actions = ["fmt"]
 
 [checks.mpris]
 kind = "commands"
-commands = [["nix", "develop", "--no-update-lock-file", "--command", "dbus-run-session", "--", "cargo", "test", "--locked", "--bin", "cbar", "clients::music::mpris::tests::idle_polling_releases_bus_subscriptions", "--", "--exact", "--ignored"]]
+commands = [["nix", "develop", "--no-update-lock-file", "--command", "bash", "checks/mpris-session.sh"]]
